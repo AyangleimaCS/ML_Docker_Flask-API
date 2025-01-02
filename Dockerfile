@@ -1,4 +1,4 @@
-FROM python:3.8.20
+FROM python:3.9.21
 
 WORKDIR /code
 
@@ -10,4 +10,4 @@ COPY ./app /code/app
 
 EXPOSE 8000
 
-CMD ["uvicorn", "application.server:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.server:app", "--host", "0.0.0.0", "--port", "8000"]
